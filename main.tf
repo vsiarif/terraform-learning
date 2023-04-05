@@ -1,13 +1,11 @@
 terraform {
   required_providers {
-        # This is the new syntax. "source" and "version" are both 
-    # optional, though in the future "source" will be required for 
-    # any provider that isn't maintained by HashiCorp.
-    random = {
-        source = "registry.terraform.io/hashicorp/random"
-        version = "2.1.0"
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
     }
   }
+}
 }
 resource "aws_instance" "ec2_instance" {
     ami = "${var.ami_id}"
