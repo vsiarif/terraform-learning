@@ -1,4 +1,12 @@
 
+variable “AWS_ACCESS_KEY_ID” {
+        default = "AKIAQUMQAZ7ZY3RER5OV"
+}
+
+variable "AWS_SECRET_ACCESS_KEY"{
+default = "E8ppGdBkZ0Wqk20pciU1A1AoAMNwspCrYl7aO2JB"
+}
+
 variable "instance_name" {
         description = "Name of the instance to be created"
         default = "awsbuilder-demo"
