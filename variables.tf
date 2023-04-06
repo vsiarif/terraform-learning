@@ -1,10 +1,4 @@
 
-variable “aws_access_key” {
-  default = “AKIAQUMQAZ7ZY3RER5OV”
-}
-variable "aws_secret_key" {
-  default = "E8ppGdBkZ0Wqk20pciU1A1AoAMNwspCrYl7aO2JB"
-}
 variable "instance_name" {
         description = "Name of the instance to be created"
         default = "awsbuilder-demo"
