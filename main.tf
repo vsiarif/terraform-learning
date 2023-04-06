@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "test_server" {
-  ami           = "ami-09d56f8956ab235b3"
+  ami           = "ami-06e46074ae430fba6"
   instance_type = "t2.micro"
 
   tags = {
