@@ -1,5 +1,5 @@
 
-variable “AWS_ACCESS_KEY_ID” {
+variable "AWS_ACCESS_KEY_ID" {
         default = "AKIAQUMQAZ7ZY3RER5OV"
 }
 
