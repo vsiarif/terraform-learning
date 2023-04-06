@@ -1,8 +1,7 @@
 # Configure the AWS Provider
 provider "aws" {
-    iam_user_name = "tfuser"
-    iam_access_key_id = "AKIAQUMQAZ7ZY3RER5OV"
-    iam_access_key_secret = "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"
+    access_key = var.AWS_ACCESS_KEY_ID
+    secret_key = var.AWS_SECRET_ACCESS_KEY
     region = "us-east-1"
  }
 resource "aws_instance" "ec2_instance" {
