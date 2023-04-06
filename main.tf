@@ -1,13 +1,23 @@
-# Configure the AWS Provider
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+
+  required_version = ">= 1.2.0"
+}
+
 provider "aws" {
-    access_key = var.AWS_ACCESS_KEY_ID
-    secret_key = var.AWS_SECRET_ACCESS_KEY
-    region = "us-east-1"
- }
-resource "aws_instance" "ec2_instance" {
-    ami = "${var.ami_id}"
-    count = "${var.number_of_instances}"
-    subnet_id = "${var.subnet_id}"
-    instance_type = "${var.instance_type}"
-    
-} 
+  region  = "us-east-1"
+}
+
+resource "aws_instance" "test_server" {
+  ami           = "ami-09d56f8956ab235b3"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "ExampleAppServerInstance"
+  }
+}
